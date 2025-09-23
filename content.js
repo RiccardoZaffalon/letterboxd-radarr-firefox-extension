@@ -18,15 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const $element = document.createElement("li");
 
-    $element.innerHTML = `
-    <a
-      target="_blank"
-      href="${url}/add/new?term=tmdb:${tmdbId}"
-      class="letterboxd-to-radarr-extension--link">
-        <span>Add to Radarr</span>
-      <img width="16" src="https://radarr.video/img/favicon-16x16.png">
-    </a>
-  `;
+    // Create the anchor element
+    const $link = document.createElement("a");
+    $link.setAttribute("target", "_blank");
+    $link.setAttribute("href", `${url}/add/new?term=tmdb:${tmdbId}`);
+    $link.classList.add("letterboxd-to-radarr-extension--link");
+
+    // Create the text span
+    const $span = document.createElement("span");
+    $span.textContent = "Add to Radarr";
+
+    // Create the image
+    const $img = document.createElement("img");
+    $img.setAttribute("width", "16");
+    $img.setAttribute("src", "https://radarr.video/img/favicon-16x16.png");
+
+    // Append the elements to build the structure
+    $link.appendChild($span);
+    $link.appendChild($img);
+    $element.appendChild($link);
 
     $panel.insertBefore($element, $panel.children[0]);
   });
