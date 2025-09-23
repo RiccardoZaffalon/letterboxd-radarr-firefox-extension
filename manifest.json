@@ -1,10 +1,18 @@
 {
   "manifest_version": 2,
   "name": "Letterboxd To Radarr",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Adds a utility button to add movies from Letterboxd to Radarr",
 
   "permissions": ["activeTab", "storage"],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
 
   "content_scripts": [
     {
