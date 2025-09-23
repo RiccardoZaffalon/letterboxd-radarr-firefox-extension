@@ -26,5 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   $panel.insertBefore($element, $panel.children[0]);
-  insertAtPosition($panel, $element, 0);
 });
