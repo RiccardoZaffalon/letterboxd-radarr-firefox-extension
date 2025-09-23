@@ -2,9 +2,9 @@
   "manifest_version": 2,
   "name": "Letterboxd To Radarr",
   "version": "1.0",
-  "description": "Adds link from letterboxd to radarr",
+  "description": "Adds a utility button to add movies from Letterboxd to Radarr",
 
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "storage"],
 
   "content_scripts": [
     {
@@ -14,6 +14,16 @@
       "run_at": "document_end"
     }
   ],
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "options_ui": {
+    "page": "options.html"
+  },
 
   "web_accessible_resources": ["styles.css"]
 }
