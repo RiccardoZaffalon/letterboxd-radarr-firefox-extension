@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Letterboxd To Radarr",
+  "version": "1.0",
+  "description": "Adds link from letterboxd to radarr",
+
+  "permissions": ["activeTab"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://letterboxd.com/film/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources": ["styles.css"]
+}
