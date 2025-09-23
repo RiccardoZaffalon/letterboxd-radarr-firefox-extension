@@ -5,7 +5,13 @@ const Selector = {
 document.addEventListener("DOMContentLoaded", () => {
   const { tmdbId } = document.body.dataset;
 
+  if (!tmdbId) return;
+
   const $panel = document.querySelector(Selector.panel);
+
+  if (!$panel) return;
+
+  if (!$panel.children?.length) return;
 
   const $element = document.createElement("li");
 
@@ -19,10 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </a>
   `;
 
-  if ($panel && $panel.children?.length) {
-    $panel.insertBefore($element, $panel.children[0]);
-    insertAtPosition($panel, $element, 0);
-  }
-
-  console.log($panel);
+  $panel.insertBefore($element, $panel.children[0]);
+  insertAtPosition($panel, $element, 0);
 });
