@@ -9,3 +9,7 @@ Auto-download is not currently part of this extension, but could be achieved via
 ## Making your own
 
 Use `npx web-ext build` to bundle into a zip for Developer Hub submission.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
